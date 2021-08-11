@@ -1,0 +1,19 @@
+<div id="app">
+  <template>
+    <div>
+      <h1>Exercício</h1>
+      <input v-model="text" placeholder="Nome pet" @keyup.enter="onAdd" @keyup.esc="onClear">
+      <select v-for="selected">
+        <option disabled value="">Informe a raça</option>
+        <option>Poodle</option>
+        <option>Sem raça</option>
+        <option>Labrador</option>
+      </select>
+      <br>
+     <button :disabled="!text" @click="onAdd">Adicionar</button>
+    </div>
+    <ul>
+      <li v-for="item of petName">{{item}} </li>
+    </ul>
+  </template>
+</div>
